@@ -1,0 +1,9 @@
+<% layout("layouts/boilerplate") %>
+
+
+    <h1>Tabel bios</h1>
+    <ul>
+        <% for(let table of tablebios){ %>
+            <li><a href="/tables/<%=table.u_table_name%>"><%= table.u_table_name%></a></li>
+        <%} %>
+    </ul>

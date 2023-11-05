@@ -1,0 +1,55 @@
+<% layout("layouts/boilerplate") %>
+
+<div class="card text-center">
+    <div class="card-header">
+      Name <%= table.u_table_name %>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title"><%= table.u_field_label %></h5>
+      <p class="card-text">><%- table.u_description %></p>
+      
+    </div>
+    <div class="card-footer text-muted">
+
+    </div>
+  </div>
+<% if(fields.length>0){ %>
+
+
+    <div>
+      <h3 class="mt-5">Noteable mentions</h3>
+      <table class="table table-striped">
+      
+        <thead>
+          <tr>
+            <th scope="col">label</th>
+            <th scope="col">name</th>
+            <th scope="col">description</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <% for(let field of fields){ %>
+            <tr>
+              
+              <td><%=field.u_field_label  %></td>
+              <td><%=field.u_field_name  %></td>
+              <td><%=field.u_description  %></td>
+            </tr>
+        <%} %>
+        
+        </tbody>
+      </table>
+    </div>
+
+<%}else{%>
+<h2>no notable mentions yet</h2>
+<%} %>
+
+    
+    
+      
+
+
+
+  
